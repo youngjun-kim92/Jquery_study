@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      .news {
+        display: none;
+      }
+    </style>
+    <script>
+        $(function () {
+          $('.btnNews').click(function () {
+            $('.news').show(2000,function () {
+              alert('이상 긴급 뉴스였습니다.');
+            });
+            //$('.news').hide(2000);
+            $('.news').toggle(2000);
+          });
+        });
+    </script>
+</head>
+<body>
+  <button class="btnNews">뉴스 토글</button>
+  <div class="news">
+    <h2>벼랑 끝 몰린 한국 야구</h2>
+    <p>우산을 쓴 남성 한 명이 골목길을 걸어갑니다. 잠시 뒤 위쪽 도로에서 나타난 모자를 쓴 남성.</p>
+  </div>
+</body>
+</html>

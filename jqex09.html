@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       $(function () {
+        let num1='30원';
+        let num2='50원';
+        //alert(Number(num1)+Number(num2));   //단위가 들어가면 숫자로 못바꿈
+        alert(parseInt(num1)+parseInt(num2)); //parseInt를 쓰면 특수문자가 나오면 그 뒤에거 전부 무시하고 숫자만 가져옴
+        let num3='5.8';
+        let num4='2.3';
+        alert(parseInt(num3)+parseInt(num4)); //.이 특수문자 취급되서 5와 2만 가져와서 더하면 7이나옴
+        let num5='원가3000원';
+        let num6='원가2000원';
+        alert(parseInt(num5)+parseInt(num6)); //문자 '원가'가 먼저나와서 계산이 불가
+       });
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

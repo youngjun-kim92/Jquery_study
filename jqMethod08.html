@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () { 
+          //$('.list3').parent().css('border','2px solid red');
+          //$('.list3').parents().css('border','2px solid red');
+          //$('.list3').closest('div').css('border','2px solid red');
+          let index;
+          let color=['yellow','red','green','pink','orange'];
+          $('a').click(function () {
+            index=$(this).parent().index();
+            $(this).css('background',color[index]);
+          });
+          $('#box1>section').children().css({
+            color:'red',
+            backgroundColor:'yellow',
+            border:'2px solid blue'
+          });
+          //$('.list3').next().css('border','2px solid red');
+          //$('.list3').nextAll().css('border','2px solid red');
+          //$('.list3').prev().css('border','2px solid red');
+          //$('.list3').prevAll().css('border','2px solid red');
+          //$('#box1>h1').nextUntil('p').css('border','2px solid red');
+          //$('.list3').siblings().css('border','2px solid red');
+          //$('#box1').find('.list3').css('border','2px solid red');
+          $('li:only-child').css('border','2px solid red');
+        });
+    </script>
+</head>
+<body>
+  <div id="box1">
+    <h1>메서드 형태 선택자</h1>
+    <ul>
+      <li><a href="#">리스트1</a></li>
+      <li><a href="#">리스트2</a></li>
+      <li class="list3"><a href="#">리스트3</a></li>
+      <li><a href="#">리스트4</a></li>
+      <li><a href="#">리스트5</a></li>
+    </ul>
+    <p>나는 단락</p>
+    <section>
+      <h2>나는 섹션 제목</h2>
+      <p>나는 섹션 단락</p>
+    </section>
+    <ul>
+      <li>나는 외동</li>
+    </ul>
+  </div>
+</body>
+</html>

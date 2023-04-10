@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+           /*let c=$('h1').css('color','red');
+           $('img').attr('width',500);*/
+           $('img').attr({
+            width:function(index){
+                return (index+1)*100;
+            },
+            height:100
+           });
+        });
+    </script>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+    <img src="images/Koala.jpg" alt="Koala">
+    <img src="images/Penguins.jpg" alt="Penguins">
+    <img src="images/Lighthouse.jpg" alt="Lighthouse">
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () { 
+          $('<h2>남극펭귄</h2>').appendTo('#festival');
+          $('<img>').attr({
+            src:'images/Penguins.jpg',
+            width:500,
+            height:350,
+            alt:'펭귄'
+          }).appendTo('#festival');     //$(A).appendTo(B) : A를 B의 뒷부분에 추가합니다.
+          $('<p></p>').html('펭귄은 남극에 살며 생선을 주로 먹고').appendTo('#festival');
+          let contents=['오늘은 수요일입니다.','지금은 문서 객체 생성 수업중...','홈페이지 제작은 쭉~'];
+          for(let i=0;i<contents.length;i++) {
+            $('<p></p>').html(contents[i]).appendTo('#festival');
+          }
+          $('<h1>겨울축제</h1>').prependTo('#festival');
+          $('<h2>나는 어디에 추가될까?</h2>').insertAfter('#festival');
+          $('<h2>나는 외톨이</h2>').insertBefore('body');
+        });
+    </script>
+</head>
+<body>
+    <h1>문서객체생성</h1>
+    <div id="festival">
+
+    </div>
+</body>
+</html>

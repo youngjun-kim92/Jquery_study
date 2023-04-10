@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+          /*$('h1').one('click',function () {
+            alert('안녕하세요');
+          });*/
+          let count=0;
+          $('h1').on('click',function () {
+            count++;
+            if(count==3){
+              alert('잘가세요');
+              $(this).off();
+            }
+            else{
+              alert('안녕하세요');
+            }
+          });
+        });
+    </script>
+</head>
+<body>
+    <h1>나를 클릭해보세요</h1>
+</body>
+</html>

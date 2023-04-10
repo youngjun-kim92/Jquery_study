@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      img {
+        width: 37px;
+        height: 21px;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+        //이미지를 클릭하면 width는 37씩 height는 21씩 커지게하기
+        $(function () {
+          $('img').click(function(event) {
+            /*let w=parseInt($(this).css('width')); //px단위 제거하고 숫자만 가져오기
+            let h=parseInt($(this).css('height'));
+            $(this).animate({
+              width:w+37,
+              height:h+21
+            },1000);
+          */
+            if(event.shiftKey) {
+              $(this).animate({
+                width:'-=37',
+                height:'-=21'
+              },1000);
+            }
+            else {
+              $(this).animate({
+                width:'+=37',
+                height:'+=21'
+              },1000);
+            }
+          });  
+        });
+    </script>
+</head>
+<body> 
+    <img src="images/car_green.jpg" alt="">
+</body>
+</html>

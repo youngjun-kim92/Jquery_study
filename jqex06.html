@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       $(function () {
+        //$("li:eq(-1)").css("color","red");                                //eq -> 해당 값    
+        //$('li:gt(3)').css("color","red");                                 //gt -> greater than : ~보다 큰 값
+        //$('li:lt(2)').css('color','blue');                                //lt -> less than : ~보다 작은 값
+        $('li:contains(표범)').css('background-color','skyblue');           //contains -> ()안의 문자열이 포함하는 문서객체를 선택
+        $('li:nth-child(2n)').css('color','red');
+        $('li:nth-child(2n+1)').css('color','blue');
+        $('tr:eq(0)').css({                                                 //{}를 하면 객체처럼 취급가능
+            color:'#fff',
+            background:'#000'
+        });
+        $('td:nth-child(3n+1)').css('backgroundColor','wheat');
+        $('td:nth-child(3n+2)').css('backgroundColor','violet');
+        $('td:nth-child(3n)').css('backgroundColor','yellowgreen');
+       });
+    </script>
+</head>
+<body>
+   <h2>동물의 세계</h2>
+   <ul>
+    <li>사자</li>
+    <li>코끼리</li>
+    <li>표범</li>
+    <li>거북이</li>
+    <li>기린</li>
+    <li>표범악어</li>
+    <li>원숭이</li>
+   </ul>
+   <h2>혈액형 조사</h2>
+   <table>
+    <tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+    <tr><td>김철수</td><td>o형</td><td>서울시 용산구</td></tr>
+    <tr><td>이영희</td><td>a형</td><td>서울시 중구</td></tr>
+    <tr><td>홍길동</td><td>ab형</td><td>서울시 영등포구</td></tr>
+   </table>
+</body>
+</html>

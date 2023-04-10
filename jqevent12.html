@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+          let baseFont=16;
+          $('#zoom button').on('click', function () {
+            if($(this).hasClass('zoomout')) {
+              if(baseFont<=8) return false;
+              baseFont--;
+            }
+            else if($(this).hasClass('zoomin')) {
+              if(baseFont>=30) return false;
+              baseFont++;
+            }
+            else {
+              baseFont=16;
+            }
+            $('.font').text(baseFont+'px');
+            $('body').css('fontSize',baseFont);
+          });
+        });
+    </script>
+</head>
+<body>
+  <p id="zoom">
+    <button class="zoomout">-</button>
+    <button class="base">100%</button>
+    <button class="zoomin">+</button>
+  </p>
+  <p class="font">16px</p>
+  <div id="wrap">
+      우산을 쓴 남성 한 명이 골목길을 걸어갑니다.
+      잠시 뒤 위쪽 도로에서 나타난 모자를 쓴 남성.
+      그러자 골목길에 있던 남성이 모자 쓴 남성을 우산으로 가려주는 듯한 행동을 취합니다.
+      허리를 굽힌 채로 거리에 뭔가를 계속 뿌려대는 모자 쓴 남성.
+      그렇게 20초쯤 지났을 무렵 우산 쓴 남성이 팔을 가볍게 치자 모자 쓴 남성이 서둘러 위쪽 도로로 사라집니다.
+      우산을 쓴 남성 또한 반대 방향으로 사라졌습니다.
+      그제(7일) 저녁 대구시 북구 대현동 이슬람 사원 공사장 앞 골목길 CCTV에 잡힌 모습입니다.
+      이 CCTV를 공개한 이슬람 사원 건축주는 "냄새로 봤을 때 돼지기름으로 보인다"고 밝혔습니다.
+      실제 낮에 찍은 사진을 보면 하얀색 기름 자국으로 보이는 흔적이 여러 군데 남아있습니다.
+      이 지역에선 이슬람 사원 건립을 두고 무슬림 측과 인근 주민들과의 갈등이 계속돼왔습니다.
+      지난해 10월엔 주민과 무슬림 유학생 사이에 벌어진 폭행 시비가 벌어졌고 두 달 뒤인 12월엔 주민들이 이슬람교에서 금기시하는 돼지고기를 먹는 행사를 골목길에서 열어 논란이 일기도 했습니다.
+      이번 사건이 이슬람 사원에 반대하는 목적에서 이뤄진 것인지 아님 단순한 오물투기인지는 향후 경찰 수사를 통해 가려질 것으로 보입니다.
+  </div>
+</body>
+</html>

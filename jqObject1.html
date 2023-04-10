@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+          let product={
+            name:'냉장고',
+            price:19500000,
+            type:'양문형'
+          };
+          let callResult=result.bind(product);
+          function result() {
+            alert(this.name);
+          }
+          let pcode={
+            code:'SS1234',
+            number:455
+          }
+          $.extend(product,pcode);
+          alert(product.code);
+    </script>
+</head>
+<body>
+    <h2 onclick="callResult();">제품이름</h2>
+</body>
+</html>

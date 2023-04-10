@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+          /*$('h1').on('click',function() {
+            let length=$('h1').length;
+            let target=$(this).html();
+            $('#wrap').append('<h1>'+length+' - '+target+'</h1>');
+          });*/
+          $('#wrap').on('click','h1',function () {
+            let length=$('h1').length;
+            let target=$(this).html();
+            $('#wrap').append('<h1>'+length+' - '+target+'</h1>');
+          });
+        });
+    </script>
+</head>
+<body>
+  <div id="wrap">
+    <h1>메르스</h1>
+  </div>
+</body>
+</html>

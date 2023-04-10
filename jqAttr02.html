@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        $(function () {
+            //let oldimage=['box1.png','lightbulb1.png','우는사람.png'];
+            let newimage=['box2.png','lightbulb.png','웃는사람.png'];
+            let index;
+            $('img').hover(function () {
+                index=$(this).index();
+                oldimage=$(this).attr('src');
+                $(this).attr('src','images/'+newimage[index]);
+            }, function () {
+                $(this).attr('str',oldimage);
+                //$(this).attr('src','images/'+oldimage[index]);
+           });
+        });
+    </script>
+</head>
+<body>
+    <img src="images/box1.png" alt="box1">
+    <img src="images/lightbulb1.png" alt="lightbulb1">
+    <img src="images/우는사람.png" alt="man">
+</body>
+</html>
